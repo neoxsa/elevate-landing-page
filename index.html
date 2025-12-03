@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElevateAI</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50">
+
+    <!-- *************Navigation Bar************* -->
+    <nav class="fixed w-full z-50 top-0 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Brand Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="#" class="text-2xl font-bold text-slate-900 tracking-tight">
+                        Elevate<span class="text-indigo-600">AI</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors duration-200">Features</a>
+                    <a href="#about" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors duration-200">About</a>
+                    <a href="#testimonials" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors duration-200">Testimonials</a>
+                    <a href="#contact" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors duration-200">Contact</a>
+                    
+                    <!-- CTA Button -->
+                    <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-900 hover:text-indigo-600 focus:outline-none p-2 transition-colors">
+                        <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 absolute w-full">
+            <div class="px-4 pt-4 pb-6 space-y-3 shadow-lg">
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50 transition-colors">Features</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50 transition-colors">About</a>
+                <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50 transition-colors">Testimonials</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-indigo-600 hover:bg-slate-50 transition-colors">Contact</a>
+                <div class="pt-4 mt-4 border-t border-slate-100">
+                    <a href="#" class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium shadow-sm transition-colors">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!-- *************Hero Section************* -->
+<section id="home" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-b from-slate-50 via-white to-indigo-50/30 overflow-hidden">
+    
+    <!-- Decorative Background Elements -->
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-indigo-100 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-slate-200 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            
+            <!-- Left Column: Content -->
+            <div class="text-center lg:text-left space-y-8 z-10">
+                <div class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-sm font-medium mb-4">
+                    <span class="flex h-2 w-2 rounded-full bg-indigo-600 mr-2"></span>
+                    v2.0 is now live
+                </div>
+
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-tight">
+                    Scale Your Business with <br class="hidden lg:block" />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-indigo-400">Intelligent AI</span>.
+                </h1>
+
+                <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    ElevateAI streamlines your workflow by automating complex data analysis. Unlock actionable insights and drive growth 10x faster.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <a href="#" class="w-full sm:w-auto px-8 py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-indigo-500/30 transition-all duration-300 transform hover:-translate-y-1 text-center">
+                        Start Free Trial
+                    </a>
+                    <a href="#" class="w-full sm:w-auto px-8 py-3.5 bg-white border border-slate-200 hover:border-indigo-200 text-slate-700 hover:text-indigo-600 font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2 group">
+                        <i class="fas fa-play-circle text-lg text-indigo-500 group-hover:scale-110 transition-transform"></i>
+                        Watch Demo
+                    </a>
+                </div>
+
+                <div class="pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 text-sm text-slate-500">
+                    <span>Trusted by 500+ startups</span>
+                    <div class="flex items-center gap-1 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Image & Floating Cards -->
+            <div class="relative w-full flex justify-center lg:justify-end group">
+                
+                <!-- Main Dashboard Image -->
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-slate-900/5 bg-white transform lg:rotate-2 hover:rotate-0 transition-all duration-500 z-0">
+                    <img 
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                        alt="ElevateAI Dashboard" 
+                        class="w-full h-auto object-cover max-h-[400px] lg:max-h-[500px]"
+                    >
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent lg:hidden pointer-events-none"></div>
+                </div>
+
+                <!-- Floating Cards Container -->
+                <div class="
+                    absolute bottom-4 left-0 right-0 z-20
+                    lg:static lg:inset-auto
+                    flex lg:block 
+                    overflow-x-auto lg:overflow-visible 
+                    snap-x snap-mandatory 
+                    gap-4 px-4 py-8 lg:p-0
+                    hide-scrollbar
+                ">
+                    
+                    <!-- Card 1: Growth -->
+                    <div class="
+                        flex-shrink-0 snap-center
+                        bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 
+                        w-[220px] lg:w-auto lg:min-w-[200px]
+                        lg:absolute lg:bottom-10 lg:-left-12
+                        lg:animate-bounce-slow
+                    ">
+                        <div class="flex items-center gap-3">
+                            <div class="h-10 w-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 shadow-sm">
+                                <i class="fas fa-arrow-trend-up"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium uppercase tracking-wide">Growth</p>
+                                <p class="text-lg font-bold text-slate-900">+127% <span class="text-xs font-normal text-green-600">▲</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Active Users -->
+                    <div class="
+                        flex-shrink-0 snap-center
+                        bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 
+                        w-[220px] lg:w-auto lg:min-w-[200px]
+                        lg:absolute lg:top-12 lg:-right-12
+                        lg:delay-700
+                        lg:animate-bounce-slow-delayed
+                    ">
+                        <div class="flex items-center gap-3">
+                            <div class="h-10 w-10 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 shadow-sm">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium uppercase tracking-wide">Active Users</p>
+                                <div class="flex items-baseline gap-1">
+                                    <p class="text-lg font-bold text-slate-900">24.5k</p>
+                                </div>
+                                <div class="flex -space-x-2 mt-1">
+                                    <div class="w-5 h-5 rounded-full bg-slate-300 border-2 border-white"></div>
+                                    <div class="w-5 h-5 rounded-full bg-slate-400 border-2 border-white"></div>
+                                    <div class="w-5 h-5 rounded-full bg-slate-500 border-2 border-white"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Efficiency -->
+                    <div class="
+                        flex-shrink-0 snap-center
+                        bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 
+                        w-[220px] lg:w-auto lg:min-w-[200px]
+                        lg:absolute lg:bottom-24 lg:-right-6
+                        lg:delay-700
+                        lg:animate-bounce-slow
+                    ">
+                        <div class="flex items-center gap-3">
+                            <div class="h-10 w-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 shadow-sm">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium uppercase tracking-wide">Efficiency</p>
+                                <p class="text-lg font-bold text-slate-900">10x Faster</p>
+                                <div class="w-full bg-slate-100 rounded-full h-1.5 mt-2">
+                                    <div class="bg-purple-600 h-1.5 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- Swipe Indicator -->
+                <div class="absolute bottom-1 left-0 right-0 flex justify-center gap-1 lg:hidden z-30">
+                    <div class="w-1.5 h-1.5 rounded-full bg-white/80"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-white/40"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-white/40"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- *************Features Section************* -->
+<section id="features" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-indigo-600 font-semibold tracking-wide uppercase text-sm">Our Capabilities</span>
+            <h2 class="mt-2 text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+                Why Choose ElevateAI?
+            </h2>
+            <p class="mt-4 text-lg text-slate-600">
+                We combine cutting-edge machine learning with intuitive design to give your business the competitive edge it deserves.
+            </p>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Feature Card 1: Real-time Analytics -->
+            <div class="group relative bg-slate-50 rounded-2xl p-6 lg:p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 hover:-translate-y-2">
+                <!-- Icon -->
+                <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                
+                <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                    Real-time Analytics
+                </h3>
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    Monitor your key performance indicators as they happen. Our dashboard updates instantly to help you make data-driven decisions on the fly.
+                </p>
+                <a href="#" class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-700 transition-colors">
+                    Learn more <i class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <!-- Feature Card 2: Bank-Grade Security -->
+            <div class="group relative bg-slate-50 rounded-2xl p-6 lg:p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 hover:-translate-y-2">
+                <!-- Icon -->
+                <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+                
+                <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                    Bank-Grade Security
+                </h3>
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    Your data is protected by enterprise-level AES-256 encryption. We adhere to SOC2 compliance standards to ensure your information stays private.
+                </p>
+                <a href="#" class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-700 transition-colors">
+                    Learn more <i class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <!-- Feature Card 3: Automated Workflows -->
+            <div class="group relative bg-slate-50 rounded-2xl p-6 lg:p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 hover:-translate-y-2">
+                <!-- Icon -->
+                <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-robot"></i>
+                </div>
+                
+                <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                    Automated Workflows
+                </h3>
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    Stop wasting time on repetitive tasks. Set up intelligent triggers and let our AI handle the heavy lifting while you focus on strategy.
+                </p>
+                <a href="#" class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-700 transition-colors">
+                    Learn more <i class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- *************Contact Section************* -->
+<section id="contact" class="py-20 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2 h-full">
+                
+                <!-- Left Column: Image -->
+                <div class="relative h-64 lg:h-full bg-slate-900">
+                    <img 
+                        src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                        alt="Customer Support Team" 
+                        class="absolute inset-0 w-full h-full object-cover opacity-80"
+                    >
+                    <!-- Decorative Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/10"></div>
+                    
+                    <!-- Text over Image -->
+                    <div class="absolute bottom-0 left-0 p-8 lg:p-12 text-white z-10">
+                        <h3 class="text-2xl font-bold mb-2">We're here to help</h3>
+                        <p class="text-slate-300 text-sm lg:text-base">
+                            Our team is available 24/7 to answer your questions and help you scale.
+                        </p>
+                        <div class="flex items-center gap-4 mt-6 text-sm font-medium">
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-envelope text-indigo-400"></i> support@elevate.ai
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Form -->
+                <div class="p-8 lg:p-12">
+                    <div class="mb-8">
+                        <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Get in Touch</h2>
+                        <p class="mt-2 text-slate-600">Fill out the form below and we'll get back to you within 24 hours.</p>
+                    </div>
+
+                    <form action="#" method="POST" class="space-y-5">
+                        
+                        <!-- Name Field -->
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required
+                                class="block w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-shadow"
+                                placeholder="John Doe"
+                            >
+                        </div>
+
+                        <!-- Email Field -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required
+                                class="block w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-shadow"
+                                placeholder="john@company.com"
+                            >
+                        </div>
+
+                        <!-- Message Field -->
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-700 mb-1">Message</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="4" 
+                                required
+                                class="block w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-shadow resize-none"
+                                placeholder="Tell us about your project..."
+                            ></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button 
+                            type="submit" 
+                            class="w-full flex justify-center py-3.5 px-4 border border-transparent rounded-lg shadow-md text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-200 transform hover:-translate-y-0.5"
+                        >
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-slate-900 pt-16 pb-8 border-t border-slate-800 font-sans">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 mb-12">
+            
+            <!-- LEFT COLUMN: Brand, Social & Newsletter -->
+            <div class="flex flex-col sm:flex-row lg:flex-col justify-around">
+                
+                <!-- Brand Info -->
+                <div class="space-y-4">
+                    <a href="#" class="text-2xl font-bold text-white tracking-tight inline-block">
+                        Elevate<span class="text-indigo-500">AI</span>
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-xs">
+                        Empowering modern businesses with intelligent automation and data-driven insights. Build the future, today.
+                    </p>
+                    <div class="flex items-center gap-2 text-sm text-white">
+                        <i class="fas fa-envelope text-indigo-400"></i> support@elevate.ai
+                    </div>
+                    
+                    <!-- Social Icons -->
+                    <div class="flex space-x-4 pt-2">
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors duration-200">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors duration-200">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors duration-200">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors duration-200">
+                            <i class="fab fa-dribbble text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Newsletter Component (Added Here) -->
+                <div class="mt-8 pt-6 border-t border-slate-800  sm:border-none lg:pt-0 max-w-sm">
+                    <h4 class="text-sm font-semibold text-white tracking-wide mb-3">Subscribe to our newsletter</h4>
+                    <form class="flex gap-2">
+                        <div class="relative w-full">
+                            <input 
+                                type="email" 
+                                placeholder="Enter your email" 
+                                required
+                                class="w-full bg-slate-800 border border-slate-700 text-white text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block p-2.5 placeholder-slate-500 transition-colors outline-none"
+                            >
+                        </div>
+                        <button 
+                            type="submit" 
+                            class="px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg transition-colors duration-200 focus:ring-4 focus:ring-indigo-900 focus:outline-none"
+                        >
+                            Subscribe
+                        </button>
+                    </form>
+                    <p class="mt-2 text-xs text-slate-500">No spam, unsubscribe anytime.</p>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: Links Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 px-10 lg:px-0">
+                <!-- Product -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4 tracking-wide">Product</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">Features</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">Integrations</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">Pricing</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">Changelog</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">Docs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4 tracking-wide">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">About Us</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">Careers</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">Blog</a></li>
+                        <li><a href="#contact" class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">Contact</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">Partners</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="col-span-2 sm:col-span-1">
+                    <h3 class="text-white font-semibold mb-4 tracking-wide">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">Privacy Policy</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">Terms of Service</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">Cookie Policy</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors text-sm">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-slate-500 text-sm">
+                &copy; 2025 ElevateAI Inc. All rights reserved.
+            </p>
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                <span class="text-slate-400 text-xs">All systems operational</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+<script src="script.js"></script>
+</html>

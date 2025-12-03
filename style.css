@@ -1,0 +1,19 @@
+/* Custom Style to hide scrollbar but keep functionality */
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+@keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.lg\:animate-bounce-slow {
+    animation: bounce-slow 6s infinite ease-in-out;
+}
+.lg\:animate-bounce-slow-delayed {
+    animation: bounce-slow 7s infinite ease-in-out 1s;
+}
